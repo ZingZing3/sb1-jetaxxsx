@@ -1,0 +1,14 @@
+# Protect images from direct access
+Options -Indexes
+Order deny,allow
+Deny from all
+
+# Allow access only through application
+<FilesMatch "\.(jpg|jpeg|png|gif|webp)$">
+    Allow from all
+</FilesMatch>
+
+# Add security headers
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "DENY"
+Header set X-XSS-Protection "1; mode=block"

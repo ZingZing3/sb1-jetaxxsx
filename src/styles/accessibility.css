@@ -1,0 +1,45 @@
+/* Focus Styles */
+.keyboard-navigation :focus {
+  outline: 3px solid var(--primary-color) !important;
+  outline-offset: 2px !important;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (forced-colors: active) {
+  * {
+    border-color: currentColor;
+  }
+}
+
+/* Text Spacing for Dyslexia */
+.dyslexia-friendly {
+  letter-spacing: 0.35ch;
+  word-spacing: 1.225ch;
+  line-height: 2;
+  font-family: "OpenDyslexic", sans-serif;
+}
+
+/* Color Blind Safe Colors */
+:root {
+  --color-safe-red: #FF4136;
+  --color-safe-green: #2ECC40;
+  --color-safe-blue: #0074D9;
+  --color-safe-yellow: #FFDC00;
+}
+
+/* ADHD Focus Mode */
+.focus-mode {
+  max-width: 80ch;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.8);
+}
